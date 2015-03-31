@@ -40,5 +40,8 @@ button.addEventListener("click", function() {
 		scramble.innerHTML = newScramble;
 		}
 	}
+	else {
+		scramble.innerHTML = "Why would you practice skewb";
+	}
 }
 );
