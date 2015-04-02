@@ -40,8 +40,29 @@ button.addEventListener("click", function() {
 		scramble.innerHTML = newScramble;
 		}
 	}
-	else {
+	else if (selectedEvent.options[ selectedEvent.selectedIndex ].value == "skewb") {
 		scramble.innerHTML = "Why would you practice skewb";
+	}
+	else {
+		rMoves = ["R++ ", "R-- "];
+		dMoves = ["D++ ", "D-- "];
+		uMoves = ["U\n", "U\'\n"];
+
+		for (var i = 0; i < 7; i++) {
+			for (var k = 0; k < 10; k++) {
+				if (k % 2 == 0) {
+					var randomInt = Math.floor((Math.random() * rMoves.length));
+					newScramble += rMoves[randomInt];
+				}
+				else {
+					var randomInt = Math.floor((Math.random() * dMoves.length));
+					newScramble += dMoves[randomInt];
+				}
+			}
+		var randomInt = Math.floor((Math.random() * uMoves.length));
+		newScramble += uMoves[randomInt];
+		}
+	scramble.innerHTML = newScramble;
 	}
 }
 );
