@@ -46,7 +46,7 @@ button.addEventListener("click", function() {
 	else {
 		rMoves = ["R++ ", "R-- "];
 		dMoves = ["D++ ", "D-- "];
-		uMoves = ["U\n", "U\'\n"];
+		uMoves = ["U<br>", "U\'<br>"];
 
 		for (var i = 0; i < 7; i++) {
 			for (var k = 0; k < 10; k++) {
@@ -62,7 +62,7 @@ button.addEventListener("click", function() {
 		var randomInt = Math.floor((Math.random() * uMoves.length));
 		newScramble += uMoves[randomInt];
 		}
-	scramble.innerHTML = newScramble;
+        scramble.innerHTML = newScramble;
 	}
 }
 );
